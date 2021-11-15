@@ -297,7 +297,7 @@ select * from pgq_node.get_consumer_state('bqueue', 'random_consumer2');
 select * from pgq_node.set_consumer_completed('bqueue', 'random_consumer2', 2);
  ret_code |                   ret_note                   
 ----------+----------------------------------------------
-      100 | Consumer random_consumer2 compleded tick = 2
+      100 | Consumer random_consumer2 completed tick = 2
 (1 row)
 
 select * from pgq_node.get_consumer_state('bqueue', 'random_consumer2');
