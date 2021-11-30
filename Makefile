@@ -1,8 +1,8 @@
 
 EXTENSION = pgq_node
 
-EXT_VERSION = 3.4
-EXT_OLD_VERSIONS = 3.2 3.2.5 3.3.1
+EXT_VERSION = 3.5
+EXT_OLD_VERSIONS = 3.2 3.2.5 3.3.1 3.4
 
 Extension_regress = pgq_node_init_ext   pgq_node_test
 Contrib_regress   = pgq_node_init_noext pgq_node_test
@@ -19,11 +19,4 @@ dox: cleandox $(SRCS)
 	$(CATSQL) --ndoc structure/tables.sql > docs/sql/pgq_node.sql
 	$(CATSQL) --ndoc structure/functions.sql > docs/sql/functions.sql
 	$(NDOC) $(NDOCARGS)
-
-deb:
-	make -f debian/rules genfiles
-	debuild -us -uc -b
-
-debclean:
-	make -f debian/rules debclean
 
